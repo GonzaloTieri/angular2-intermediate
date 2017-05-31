@@ -1,0 +1,12 @@
+<div [routerLink]="['/event', evento.id]" class="well hoverwell thumbnail">
+  <div>Id {{evento.id}}</div>
+  <div>Name {{evento.name}}</div>
+  <div *ngIf="evento?.location">Location: {{evento?.location?.address}}</div>
+  <div *ngIf="evento?.onlineUrl">Online Url: {{evnto?.onlineUrl}}</div>
+  <div [ngClass]="getStartTimeStyle()" [ngSwitch]="evento?.time">
+    <span *ngSwitchCase="'9:00 am'">Early Start</span>
+    <span *ngSwitchCase="'10:00 am'">Late Start</span>
+    <span *ngSwitchDefault>Normal Start</span>
+  </div>
+  <button class="btn btn-primary" (click)="handleClickMe()">Click me </button>
+</div>

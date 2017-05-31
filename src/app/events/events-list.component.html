@@ -1,0 +1,15 @@
+<div>
+    <hr>
+    <h1> Upcoming Angualar 2 Events </h1>
+    <hr/>
+    <div class="well hoverwell thumbnail">
+        <div>Hello World</div>
+    </div>
+    <div class="row">
+        <div *ngFor="let evento of events" class="col-md-6">
+            <app-event-thumbnail 
+            (eventClick)="handleClickMeFather($event)" [evento]="evento">
+            </app-event-thumbnail>
+        </div>
+    </div>
+</div>
